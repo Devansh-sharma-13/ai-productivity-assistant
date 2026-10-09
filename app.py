@@ -43,7 +43,7 @@ with tab1:
             
             with st.spinner("Analyzing document..."):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 st.subheader("Answer:")
@@ -63,7 +63,7 @@ with tab2:
             prompt = f"Write a {tone.lower()} {content_type} about the following topic: {content_topic}. Keep it engaging and tailored for the specific format."
             with st.spinner("Generating content..."):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 st.subheader("Generated Output:")
@@ -81,7 +81,7 @@ with tab3:
             prompt = f"Summarize the following meeting notes clearly with key discussions, bullet points, and a distinct list of actionable tasks/next steps:\n\n{meeting_text}"
             with st.spinner("Processing notes..."):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 st.subheader("Meeting Summary & Action Items:")
@@ -105,7 +105,7 @@ with tab4:
                 
             with st.spinner("Processing..."):
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.8-flash",
                     contents=prompt
                 )
                 st.subheader("Result:")
